@@ -17,6 +17,7 @@ public class CarController {
 
     @PostMapping("/")
     public Car createCar(@RequestBody Car car) {
+        car.setId(null);
         Car newCar = carRepository.saveAndFlush(car);
         return newCar;
     }
