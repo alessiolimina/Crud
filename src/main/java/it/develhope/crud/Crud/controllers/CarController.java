@@ -39,7 +39,7 @@ public class CarController {
         }
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public Car updateCarType(@PathVariable long id, @RequestParam String type) {
         if (carRepository.existsById(id)) {
             Car car = carRepository.getReferenceById(id);
@@ -66,4 +66,4 @@ public class CarController {
         carRepository.deleteAll();
     }
 }
-//todo try API calls using Postman and adding JSON and documentation
+//Documentazione Postman: https://documenter.getpostman.com/view/26121086/2s93eSYaVo
